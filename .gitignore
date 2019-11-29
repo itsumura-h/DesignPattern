@@ -107,6 +107,9 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+# Django
+*.sqlite3
+
 ### react ###
 .DS_*
 *.log
