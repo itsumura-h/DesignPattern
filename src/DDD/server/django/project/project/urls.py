@@ -14,11 +14,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 from django.contrib.auth import views
-from .PasswordViews import PasswordViews # 自前で作ったクラス
+from .PasswordViews import PasswordViews  # 自前で作ったクラス
 
+from django_sample_webpage.urls import web_page_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,8 +27,12 @@ urlpatterns = [
     # path('password_reset/', views.PasswordResetView.as_view(), name='admin_password_reset'),
     # ↓自前で作ったクラスをルーティングに渡している
     path('password_reset/', PasswordViews.as_view(), name='admin_password_reset'),
-    path('password_reset/done/', views.PasswordResetDoneView.as_view(), name='password_reset_done'),
-    path('reset/<uidb64>/<token>/', views.PasswordResetConfirmView.as_view(), name='password_reset_confirm'),
-    path('reset/done/', views.PasswordResetCompleteView.as_view(), name='password_reset_complete'),
+    path('password_reset/done/', views.PasswordResetDoneView.as_view(),
+         name='password_reset_done'),
+    path('reset/<uidb64>/<token>/', views.PasswordResetConfirmView.as_view(),
+         name='password_reset_confirm'),
+    path('reset/done/', views.PasswordResetCompleteView.as_view(),
+         name='password_reset_complete'),
 
+    path('WebPageSample/', include(web_page_urls)),
 ]
