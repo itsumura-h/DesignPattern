@@ -1,0 +1,16 @@
+<h1>新規作成ページ</h1>
+<a href="../">戻る</a>
+<form method="POST">
+  {% csrf_token %}
+  <p>名前<input type="text" name="name"></p>
+  <p>
+    権限
+    <select name="auth">
+        <option></option>
+        {% for auth in auth_list %}
+          <option value="{{auth.id}}">{{ auth.name }}</option>
+        {% endfor %}
+    </select>
+  </p>
+  <button type="submit">送信</button>
+</form>

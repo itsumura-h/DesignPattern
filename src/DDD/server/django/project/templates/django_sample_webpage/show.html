@@ -1,0 +1,12 @@
+<h1>詳細ページ</h1>
+<p><a href="../">戻る</a></p>
+<p><a href="/WebPageSample/{{user.id}}/edit/">編集</a></p>
+<table border="1">
+  <tr><td>id</td><td>名前</td><td>権限</td></tr>
+    <tr>
+      <td>{{ user.id }}</td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.auth.name }}</td>
+    </tr>
+</table>
+

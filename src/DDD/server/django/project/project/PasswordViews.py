@@ -1,9 +1,4 @@
 from django.contrib.auth import views
-# from django.http import request 
-
-
-from inspect import getmembers
-from pprint import pprint
 
 # パスワードリセットするクラスを継承している ↓
 class PasswordViews(views.PasswordResetView):

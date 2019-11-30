@@ -1,0 +1,15 @@
+<h1>一覧ページ</h1>
+<a href="/WebPageSample/create/">新規作成</a>
+<table border="1">
+  <tr><td>id</td><td>名前</td><td>権限</td><td>詳細</td></tr>
+  {% for user in users %}
+      <tr>
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.auth.name }}</td>
+        <td> <a href="/WebPageSample/{{ user.id }}/">詳細</a></td>
+      </tr>
+    </a>
+  {% endfor %}
+</table>
+
