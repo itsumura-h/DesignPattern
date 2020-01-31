@@ -1,3 +1,4 @@
+from orator.orm import belongs_to
 import logging
 
 from orator import DatabaseManager
@@ -42,10 +43,10 @@ handler.setFormatter(formatter)
 
 logger.addHandler(handler)
 
-from orator.orm import belongs_to
 
 class Auth(Model):
     __table__ = 'auth'
+
 
 class User(Model):
     __table__ = 'users'
