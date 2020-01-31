@@ -2,6 +2,12 @@ from django.db import models
 
 # Create your models here.
 
+class Nim(models.Model):
+    datetime = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        db_table = 'nim'
+
 
 class Auth(models.Model):
     def __str__(self):
