@@ -4,7 +4,7 @@ from django.shortcuts import render, HttpResponse, redirect
 #     Auth,
 #     User
 # )
-from .orator import (
+from models.orator import (
     Auth,
     User
 )
