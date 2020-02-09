@@ -2,10 +2,10 @@ version: '3'
 services:
   django:
     build:
-      context: ./docker/dockerfile
+      context: .
       dockerfile: Python_Dockerfile
     tty: true
     ports: # host:guest
       - 8005:8000
     volumes:
-      - ./src/DDD/server/django:/home/www
+      - ./:/home/www

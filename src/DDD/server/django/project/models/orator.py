@@ -31,25 +31,27 @@ db = DatabaseManager(config)
 Model.set_connection_resolver(db)
 
 
-logger = logging.getLogger('orator.connection.queries')
-logger.setLevel(logging.DEBUG)
+# logger = logging.getLogger('orator.connection.queries')
+# logger.setLevel(logging.DEBUG)
 
-formatter = logging.Formatter(
-    'It took %(elapsed_time)sms to execute the query %(query)s'
-)
+# formatter = logging.Formatter(
+#     'It took %(elapsed_time)sms to execute the query %(query)s'
+# )
 
-handler = logging.StreamHandler()
-handler.setFormatter(formatter)
+# handler = logging.StreamHandler()
+# handler.setFormatter(formatter)
 
-logger.addHandler(handler)
+# logger.addHandler(handler)
 
 
 class Auth(Model):
     __table__ = 'auth'
+    __timestamps__ = False
 
 
 class User(Model):
     __table__ = 'users'
+    __timestamps__ = False
 
     @belongs_to('auth_id')
     def auth(self):

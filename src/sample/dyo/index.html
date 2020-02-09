@@ -14,7 +14,7 @@ main=()=>{
 
   return h('div', {},
     h('h1', {}, 'Dyo Sample'),
-    h('ui', {}, list.map(row=>{
+    h('ul', {}, list.map(row=>{
       return h('li', {style: 'color: #ff6600'}, row)
     })),
     h('div', {},
