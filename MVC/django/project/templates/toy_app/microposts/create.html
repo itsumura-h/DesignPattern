@@ -1,0 +1,32 @@
+{% extends 'toy_app/base.html' %}
+
+
+{% block content %}
+
+<h1>New microposts</h1>
+<form method="POST">
+  <div>
+    <p>Content</p>
+    {% if errors.content %}
+      {% for e in errors.content %}
+      <p style="color: red">{{e}}</p>
+      {% endfor %}
+    {% endif %}
+    <textarea name="content">{{content}}</textarea>
+  </div>
+  <div>
+    <p>User</p>
+    {% if errors.user_id %}
+      {% for e in errors.user_id %}
+      <p style="color: red">{{e}}</p>
+      {% endfor %}
+    {% endif %}
+    <input type="number" name="user_id" value="{{user_id}}">
+  </div>
+  <p>
+    <button type="submit">Confirm create micropost</button>
+  </p>
+</form>
+<a href="../">Back</a>
+
+{% endblock %}

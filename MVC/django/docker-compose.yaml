@@ -1,0 +1,11 @@
+version: '3'
+services:
+  django:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    tty: true
+    ports: # host:guest
+      - 8005:8000
+    volumes:
+      - .:/home/www

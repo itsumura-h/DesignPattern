@@ -1,0 +1,22 @@
+{% extends 'toy_app/base.html' %}
+
+
+{% block content %}
+
+<h1>Confirm edit user</h1>
+<form method="POST" action="/toy_app/users/{{id}}/">
+  <div>
+    <p>Name</p>
+    <input type="text" name="name" value="{{name}}" readonly>
+  </div>
+  <div>
+    <p>Email</p>
+    <input type="text" name="email" value="{{email}}" readonly>
+  </div>
+  <p>
+    <button type="submit">Edit user</button>
+  </p>
+</form>
+<a href="/toy_app/users/{{id}}/edit/">Back</a>
+
+{% endblock %}

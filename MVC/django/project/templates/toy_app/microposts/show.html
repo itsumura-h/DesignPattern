@@ -1,0 +1,16 @@
+{% extends 'toy_app/base.html' %}
+
+
+{% block content %}
+
+<h1>microposts</h1>
+<div>
+  <b>Content: </b>{{content}}
+</div>
+<div>
+  <b>User_id: </b>{{user_id}}
+</div>
+<p><a href="/toy_app/microposts/{{id}}/edit/">Edit</a></p>
+<p><a href="/toy_app/microposts/">Back</a></p>
+
+{% endblock %}

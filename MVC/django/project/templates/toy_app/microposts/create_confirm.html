@@ -1,0 +1,22 @@
+{% extends 'toy_app/base.html' %}
+
+
+{% block content %}
+
+<h1>Confirm new micropost</h1>
+<form method="POST" action="/toy_app/microposts/">
+  <div>
+    <p>Content</p>
+    <textarea name="content" readonly>{{content}}</textarea>
+  </div>
+  <div>
+    <p>User</p>
+    <input type="number" name="user_id" value="{{user_id}}" readonly>
+  </div>
+  <p>
+    <button type="submit">Create micropost</button>
+  </p>
+</form>
+<a href="/toy_app/microposts/create/">Back</a>
+
+{% endblock %}

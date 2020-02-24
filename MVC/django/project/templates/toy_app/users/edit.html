@@ -1,0 +1,22 @@
+{% extends 'toy_app/base.html' %}
+
+
+{% block content %}
+
+<h1>Edit user</h1>
+<form method="POST">
+  <div>
+    <p>Name</p>
+    <input type="text" name="name" value="{{name}}">
+  </div>
+  <div>
+    <p>Email</p>
+    <input type="email" name="email" value="{{email}}">
+  </div>
+  <p>
+    <button type="submit">Confirm edit user</button>
+  </p>
+</form>
+<a href="../">Back</a>
+
+{% endblock %}
