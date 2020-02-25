@@ -2,12 +2,12 @@
 
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-    <a href="#" id="logo">sample app</a>
+    <a href="{% url 'root_path' %}" id="logo">sample app</a>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Help</a></li>
-        <li><a href="#">Log in</a></li>
+        <li><a href="{% url 'root_path' %}">Home</a></li>
+        <li><a href="{% url 'help_path' %}">Help</a></li>
+        <li><a href="/static_pages/login/	">Log in</a></li>
       </ul>
     </nav>
   </div>

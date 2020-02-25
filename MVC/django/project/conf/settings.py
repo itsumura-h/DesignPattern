@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'models',
     'app',
-    'toy_app'
 ]
 
 MIDDLEWARE = [

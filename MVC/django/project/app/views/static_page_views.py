@@ -11,3 +11,7 @@ def help(request):
 
 def about(request):
     return render(request, 'app/static_pages/about.html')
+
+
+def contact(request):
+    return render(request, 'app/static_pages/contact.html')
