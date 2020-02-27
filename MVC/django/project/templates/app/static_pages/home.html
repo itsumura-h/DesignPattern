@@ -4,10 +4,15 @@
 {% block title %}{% full_title 'Home' %}{% endblock title %}
 
 {% block content %}
-<h1>Sample App</h1>
-<p>
-  This is the home page for the
-  <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
-  sample application.
-</p>
+<div class="center jumbotron">
+  <h1>Welcome to the Sample App</h1>
+
+  <h2>
+    This is the home page for the
+    <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
+    sample application.
+  </h2>
+
+  <a href="{% url 'signup_path' %}" class="btn btn-lg btn-primary">Sign up now!</a>
+</div>
 {% endblock content %}
