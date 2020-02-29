@@ -18,7 +18,7 @@ config = {
         'driver': 'sqlite',
         'database': settings.DATABASES['default']['NAME'],
         'prefix': '',
-        'log_queries': True,
+        'log_queries': False,
     }
 }
 
@@ -42,7 +42,7 @@ logger.addHandler(handler)
 
 class User(Model):
     __table__ = 'users'
-    __timestamps__ = False
+    # __timestamps__ = False
 
 
 class MicroPost(Model):
