@@ -10,8 +10,8 @@ class User(models.Model):
 
     name = models.CharField(max_length=255)
     email = models.CharField(max_length=255)
-    created_at = models.DateTimeField(default=timezone.now)
-    updated_at = models.DateTimeField(default=timezone.now)
+    created_at = models.DateTimeField(default=timezone.now, blank=True, null=True)
+    updated_at = models.DateTimeField(default=timezone.now, blank=True, null=True)
 
     class Meta:
         db_table = 'users'

@@ -42,7 +42,7 @@ logger.addHandler(handler)
 
 class User(Model):
     __table__ = 'users'
-    # __timestamps__ = False
+    __timestamps__ = False
 
 
 class MicroPost(Model):
