@@ -35,7 +35,7 @@ class User:
             if len(value) > 255:
                 self.value = None
 
-            pattern = re.compile(r"^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9]+\.[?:\.a-zA-Z0-9]*$")
+            pattern = re.compile(r"\A[\w+\-.]+@[a-zA-Z\d\-.]+\.[a-zA-Z]+\Z")
             if not pattern.match(value):
                 self.value = None
 

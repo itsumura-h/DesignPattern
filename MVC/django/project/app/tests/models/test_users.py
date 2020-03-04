@@ -43,4 +43,18 @@ class UserTestCase(TestCase):
 
         for valid_address in valid_addresses:
             user = User(name=self.name, email=valid_address)
-            self.assertTrue(user.valid)
+            if not user.valid():
+                print(valid_address)
+            self.assertTrue(user.valid())
+
+    def test_email_validation_should_not_valid(self):
+        valid_addresses = [
+            'alice+bob@baz.',
+            'foo@bar..com'
+        ]
+
+        for valid_address in valid_addresses:
+            user = User(name=self.name, email=valid_address)
+            if not user.valid():
+                print(valid_address)
+            self.assertFalse(user.valid())
