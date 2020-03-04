@@ -18,7 +18,7 @@ config = {
         'driver': 'sqlite',
         'database': settings.DATABASES['default']['NAME'],
         'prefix': '',
-        'log_queries': True,
+        'log_queries': False,
     }
 }
 
