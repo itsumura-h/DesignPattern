@@ -17,7 +17,7 @@ RUN git config --global http.sslVerify false
 
 RUN pip install --upgrade --trusted-host=pypi.org --trusted-host=pypi.python.org --trusted-host=files.pythonhosted.org pip setuptools wheel && \
     pip install --upgrade --trusted-host=pypi.org --trusted-host=pypi.python.org --trusted-host=files.pythonhosted.org \
-    django djangorestframework django-cors-headers django-extensions django-environ orator \
+    django djangorestframework django-cors-headers django-extensions django-environ orator cerberus \
     django-webtest pylint pyformat flake8 bpython tqdm
 # RUN poetry config settings.virtualenvs.in-project true
 

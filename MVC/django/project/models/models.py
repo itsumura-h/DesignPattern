@@ -9,7 +9,8 @@ class User(models.Model):
         return self.name
 
     name = models.CharField(max_length=255)
-    email = models.CharField(max_length=255)
+    email = models.CharField(max_length=255, db_index=True, unique=True)
+    password = models.CharField(max_length=255)
     created_at = models.DateTimeField(default=timezone.now, blank=True, null=True)
     updated_at = models.DateTimeField(default=timezone.now, blank=True, null=True)
 
