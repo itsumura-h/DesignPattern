@@ -46,3 +46,20 @@
 .header nav a.active {
 	background: rgba(0,0,0,0.4);
 }
+
+
+@import "../../../node_modules/uikit/src/scss/variables-theme.scss";
+@import "../../../node_modules/uikit/src/scss/mixin-thema.scss";
+
+
+.org-button {
+	@extend .uk-button;
+	background-color: black;
+	color: goldenrod;
+	border-color: white;
+}
+
+.org-button:hover {
+	background-color: goldenrod;
+	color: black;
+}
