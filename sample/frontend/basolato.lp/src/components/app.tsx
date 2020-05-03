@@ -5,8 +5,11 @@ import Home from "../routes/home";
 import Profile from "../routes/profile";
 import NotFoundPage from '../routes/notfound';
 import Header from "./header";
+import Sidebar from "./sidebar";
 
+import 'uikit'
 import 'uikit/dist/css/uikit.min.css'
+
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 if ((module as any).hot) {
@@ -23,12 +26,19 @@ const App: FunctionalComponent = () => {
     return (
         <div id="app">
             <Header />
-            <Router onChange={handleRoute}>
-                <Route path="/" component={Home} />
-                <Route path="/profile/" component={Profile} user="me" />
-                <Route path="/profile/:user" component={Profile} />
-                <NotFoundPage default />
-            </Router>
+            <div uk-grid>
+              <div class="uk-width-1-5">
+                <Sidebar/>
+              </div>
+              <div class="uk-width-4-5">
+                <Router onChange={handleRoute}>
+                  <Route path="/" component={Home} />
+                  <Route path="/profile/" component={Profile} user="me" />
+                  <Route path="/profile/:user" component={Profile} />
+                  <NotFoundPage default />
+                </Router>
+              </div>
+            </div>
         </div>
     );
 };

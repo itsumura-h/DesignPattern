@@ -1,8 +1,8 @@
-import { FunctionalComponent, h } from "preact";
+import { h } from "preact";
 import { Link } from "preact-router/match";
 import * as s from "./style.scss";
 
-const Header: FunctionalComponent = () => {
+const Header=()=>{
   return (
     <div>
       {/* <header class={s.header}>
