@@ -4,15 +4,25 @@ import { Link } from "preact-router/match";
 const Sidebar = () => {
   return (
     <ul class="uk-nav-primary uk-nav-parent-icon" uk-nav>
-      <li class="uk-parent">
-        <a href="#">Parent</a>
-        <ul class="uk-nav-primary uk-nav-sub">
-          <li><Link href="/" activeClassName="uk-active">home</Link></li>
-          <li><Link href="/profile" activeClassName="uk-active">Me</Link></li>
-          <li class="uk-parent"><Link href="/profile/john" activeClassName="uk-active">john</Link></li>
-        </ul>
+      <li>
+        <Link href="/" activeClassName="uk-active" class="uk-button uk-button-default">home</Link>
+        <Link href="/profile" activeClassName="uk-active" class="uk-button uk-button-default">Me</Link>
+        <Link href="/profile/john" activeClassName="uk-active" class="uk-button uk-button-default">john</Link>
+        <Link href="/profile" activeClassName="uk-active" class="uk-button uk-button-default">Me</Link>
+        <Link href="/profile/john" activeClassName="uk-active" class="uk-button uk-button-default">john</Link>
+        <Link href="/profile" activeClassName="uk-active" class="uk-button uk-button-default">Me</Link>
+        <Link href="/profile/john" activeClassName="uk-active" class="uk-button uk-button-default">john</Link>
+        <Link href="/profile" activeClassName="uk-active" class="uk-button uk-button-default">Me</Link>
+        <Link href="/profile/john" activeClassName="uk-active" class="uk-button uk-button-default">john</Link>
+        <Link href="/profile" activeClassName="uk-active" class="uk-button uk-button-default">Me</Link>
+        <Link href="/profile/john" activeClassName="uk-active" class="uk-button uk-button-default">john</Link>
+        <Link href="/profile" activeClassName="uk-active" class="uk-button uk-button-default">Me</Link>
+        <Link href="/profile/john" activeClassName="uk-active" class="uk-button uk-button-default">john</Link>
+        <Link href="/profile" activeClassName="uk-active" class="uk-button uk-button-default">Me</Link>
+        <Link href="/profile/john" activeClassName="uk-active" class="uk-button uk-button-default">john</Link>
+        <Link href="/profile" activeClassName="uk-active" class="uk-button uk-button-default">Me</Link>
+        <Link href="/profile/john" activeClassName="uk-active" class="uk-button uk-button-default">john</Link>
       </li>
-      <li><a href="#">Item</a></li>
     </ul>
   )
 }

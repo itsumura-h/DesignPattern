@@ -1,0 +1,28 @@
+.top {
+  background-color: black;
+  color: #7f7f7f;
+  h1 {
+    color: goldenrod;
+  }
+  a {
+    color: goldenrod !important;
+  }
+}
+
+.phone {
+  display: block;
+}
+
+.pc {
+	display: none !important;
+}
+
+@media screen and (min-width: 767px) {
+	.phone {
+		display: none !important;
+  }
+
+  .pc {
+    display: flex !important;
+  }
+}
