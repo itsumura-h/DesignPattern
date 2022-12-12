@@ -25,7 +25,7 @@
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
-    "express": "^4.16.2",
+    "express": "^4.17.3",
     "preact": "^8.2.6",
     "preact-render-to-string": "^3.7.0",
     "preact-router": "^2.6.0",
